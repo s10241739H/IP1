@@ -1,79 +1,44 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
+  // Existing scroll function
 }
 
-
 function displayImagesOpacity() {
-    var images = document.querySelectorAll(".merchimg img");
-  
-    for (var i = 0; i < images.length; i++) {
-      images[i].style.opacity = "1";
-    }
-  }
-  
-  window.addEventListener("load", function () {
-    displayImagesOpacity();
-    displayImagesSlider();
-  });
-  
-  
-  document.addEventListener("DOMContentLoaded", function() {
-    
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-  
-window.addEventListener("scroll", reveal);
-});
-  
+  // Existing code for displaying images opacity
+}
 
+window.addEventListener("load", function () {
+  displayImagesOpacity();
+  displayImagesSlider();
+});
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
 
 loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+  e.preventDefault();
+  const username = loginForm.username.value;
+  const password = loginForm.password.value;
 
-    if (username === "hello" && password === "password") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-})
-
-
-
+  if (username === "hello" && password === "password") {
+      alert("You have successfully logged in.");
+      location.reload();
+  } else {
+      loginErrorMsg.style.opacity = 1;
+  }
+});
 
 import SpotifyGetPlaylists from "./components/SpotifyGetPlaylists/SpotifyGetPlaylists";
 import "./style.css";
 
 const clientId = "b6ff65d1ed1649bd883f61d2ce2576b2";
-const redirectUrlAfterLogin = "http://127.0.0.1:5500/index2.html";
+const redirectUrlAfterLogin = "http://127.0.0.1:5503/index.html";
 const scopes = [
-  "user-read-currently-playing",
-  "user-read-playback-state",
-  "playlist-read-private",
+  "user-read-top-read",
 ];
 const spotifyAuthorizeEndpoint = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUrlAfterLogin}&scope=${scopes.join(
   "%20"
@@ -81,33 +46,81 @@ const spotifyAuthorizeEndpoint = `https://accounts.spotify.com/authorize?client_
 
 const WebApp = () => {
   useEffect(() => {
-    if (window.location.hash) {
-      const { access_token, expires_in, token_type } = window.location.hash
-        .substring(1)
-        .split("&")
-        .reduce((acc, param) => {
-          const [key, value] = param.split("=");
-          acc[key] = value;
-          return acc;
-        }, {});
+      if (window.location.hash) {
+          const { access_token, expires_in, token_type } = window.location.hash
+              .substring(1)
+              .split("&")
+              .reduce((acc, param) => {
+                  const [key, value] = param.split("=");
+                  acc[key] = value;
+                  return acc;
+              }, {});
 
-      localStorage.clear();
-      localStorage.setItem("accessToken", access_token);
-      localStorage.setItem("tokenType", token_type);
-      localStorage.setItem("expiresIn", expires_in);
-    }
+          localStorage.clear();
+          localStorage.setItem("accessToken", access_token);
+          localStorage.setItem("tokenType", token_type);
+          localStorage.setItem("expiresIn", expires_in);
+      }
   }, []);
 
+  useEffect(() => {
+      // Fetch and display top tracks
+      getTopTracks();
+  }, []); // Run only once after component mounts
+
   return (
-    <div className="container">
-      <h1>hi</h1>
-      <a href={spotifyAuthorizeEndpoint}>
-        <button>Login to Spotify</button>
-      </a>
-      <SpotifyGetPlaylists />
-    </div>
+      <div class="container">
+          <h1>hi</h1>
+          <a href={spotifyAuthorizeEndpoint}>
+              <button>Login to Spotify</button>
+          </a>
+          <SpotifyGetPlaylists />
+      </div>
   );
 };
 
 export default WebApp;
+
+async function getProfile() {
+  const accessToken = localStorage.getItem('accessToken');
+
+  const response = await fetch('https://api.spotify.com/v1/me', {
+      headers: {
+          Authorization: 'Bearer ' + accessToken
+      }
+  });
+
+  if (response.ok) {
+      const data = await response.json();
+      console.log('User Profile Data:', data);
+  } else {
+      console.error('Error fetching user profile:', response.status);
+  }
+}
+
+async function getTopTracks() {
+  const accessToken = localStorage.getItem('accessToken');
+
+  const response = await fetch('https://api.spotify.com/v1/me/top/tracks', {
+      headers: {
+          Authorization: 'Bearer ' + accessToken
+      }
+  });
+
+  if (response.ok) {
+      const data = await response.json();
+      console.log('Top Tracks Data:', data);
+
+      // Call the function to display the top tracks
+      displayTopTracks(data.items);
+  } else {
+      console.error('Error fetching top tracks:', response.status);
+  }
+}
+
+function displayTopTracks(tracks) {
+  // Display logic for top tracks
+}
+
+
 

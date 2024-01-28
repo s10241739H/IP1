@@ -266,7 +266,15 @@ a {
     color: #FFDDFC;
 }
 
-/* Your existing CSS styles remain unchanged */
+.featuredartist h2 {
+    color: #fff;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 3rem;
+}
+
 
 .featuredcontainer {
     display: flex;
@@ -274,7 +282,7 @@ a {
     margin: 0 auto;
     justify-content: space-evenly;
     background: rgba(0, 0, 0, 0.9); 
-    border-radius: 10px; /* Optional: add border-radius for rounded corners */
+    border-radius: 10px; 
     width: 80vw;
 }
 
@@ -443,43 +451,129 @@ a {
 
 .reviewscontent {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
     padding: 20px 40px;
 }
 
+.review-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; 
+}
 
 .reviewsimage {
-    display: flex;
-    padding: 20px 40px;
+    margin-bottom: 10px; 
 }
 
 .reviewsimage img {
-    width: 500px;
+    width: 500px; 
     height: auto;
 }
 
 .reviewsname {
-    display: flex;
-    padding: 20px 40px;
     color: white;
-    flex-direction: column;
-    align-items: flex-end;
+    text-align: center;
 }
 
-.reviewsname h1{
+.reviewsname h1 {
     font-family: "Rock Salt", cursive;
     font-weight: 1000;
     font-style: bold;
     font-size: 50px;
 }
 
-.reviewsname h2{
+.reviewsname h2 {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.concertscontainer {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 10px;
+    width: 80vw;  
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+.concertset {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+.concertimage {
+    padding: 20px;
+    align-items: center;
+}
+
+.concertimage img {
+    width: 600px;
+    height: auto;
+    padding-left: 150px;
+}
+
+.concertname {
+    color: #C35AA2;
+    align-items: center;
+    text-align: center;
+
+}
+
+.concertname h1 {
     font-family: "Rock Salt", cursive;
     font-weight: 1000;
     font-style: bold;
-    font-size: 30px;
+    font-size: 70px;
 }
+
+.concertname h2 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 35px;
+    color: #e58f8f;   
+}
+
+.concertname p {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    margin: 0 auto;
+    color: white;
+}
+
+.leaderboardcontainer {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 10px;
+    width: 65vw;
+}
+
+.leaderboardset {
+
+}
+
+
+
+
+
 
 
 
@@ -516,6 +610,258 @@ a {
 
 
 
+
+
+.artistspotlight {
+    display: flex;
+    text-align: center;
+
+}
+
+.artistspotlight h1 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 120px;
+    color: #C35AA2; 
+    margin: 0 auto;
+}
+
+.artistspotlight h2 {
+    color: black;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.artistimage {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+}
+
+.artistimage img {
+    width: 1500px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+.artistbio {
+    display: flex;
+    margin: 0 auto;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+}
+
+.artistdisco {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100%;
+    position: relative;
+}
+
+
+.artistdiscoitem {
+    position: relative;
+    margin: 5px;
+    width: calc(25% - 10px);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.artistdisco img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s;
+}
+
+.artistdiscoitem:hover img {
+    transform: scale(1.1);
+}
+
+.artistdiscohover {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.artistdiscoitem:hover .artistdiscohover {
+    opacity: 1;
+}
+
+.artistdiscohover h1 {
+    margin-bottom: 15px;
+    color: #C35AA2;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.artistdiscohover p {
+    margin-bottom: 15px;
+    color: white;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+
+
+/*news page */
+.hottestnewstitle {
+    display: flex;
+    padding: 50px;
+    margin-left: 50px; 
+}
+
+.hottestnewstitle h1 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 5rem;
+}
+
+.hottestnewscontainer {
+    display: flex;
+    width: 100%;
+}
+
+.hottestnewsimage {
+    padding: 50px;
+    margin-left: 50px;
+    width: 50%;
+    height: auto;
+}
+
+.hottestnewsimage img {
+    width: 100%;
+    height: auto;
+}
+
+.hottestnewscontainer h2 {
+    margin-right: 50px;
+    width: 50%;
+    text-align: center;
+    padding-top: 250px;
+    font-size: 2rem;
+}
+
+.newscontainerscroll {
+    display: flex;
+    width: 100%;
+}
+
+.newscontainerimage {
+    padding: 50px;
+    margin-left: 80px;
+    width: 50%;
+    height: auto;
+}
+
+.newscontainerimage img {
+    width: 600px;
+    height: auto;
+    margin-left: 350px;    
+}
+
+.newscontainerscroll h2 {
+    margin-right: 500px;
+    width: 50%;
+    text-align: center;
+    padding-top: 200px;
+    font-size: 1rem;
+}
+
+
+
+
+
+/*concerts*/
+.pickalocation {
+    display: flex;
+    color: black;
+    background-color: #FFDDFC;
+    text-align: center;
+    max-width: 100%;
+    width: 220px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.pickalocation:hover {
+    color: black;
+    background-color: #3a3a3a;
+}
+
+.seemorehome a {
+    text-decoration: none;
+    margin: auto;
+    color: #000;
+}
+
+.seemorehome a:hover {
+    text-decoration: none;
+    margin: auto;
+    color: white;
+}
+
+/*extras*/
+.searchbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px
+}
+
+.search {
+    margin: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-style: none;
+} 
+
+
+hr.thicc {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 90%;
+}
+
+hr.thicc2 {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 70%;
+}
 
 
 footer {

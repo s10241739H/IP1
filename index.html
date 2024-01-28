@@ -9,15 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <script type="module" defer src="script.js"></script>
     <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.css">
 
     <title>Vibe Vault</title>
 </head>
 
 <body>
+<div class="loading-spinner" id="loadingSpinner">
     <nav class="navbar">
         <div class="logo"><a href="index.html"><img src="Images/vibevaultlogo.png" width="250px" height="auto" alt="logo"></a></div>
        <!-- <div class="icon"><a href="login.html"><i class="fa-solid fa-user fa-xl"></i></a></div>-->
@@ -81,7 +82,7 @@
 
 <div class="featuredcontainer" data-aos="fade-up" data-aos-duration="5000"data-aos-easing="linear">
     <div class="featuredimage">
-        <a href="https://youtu.be/xH3nqcOA2DA?si=jBzmF_pjvLL8gBSo"><img src="Images/americandream.jpeg" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear"></a>
+        <a target="_blank" href="https://youtu.be/xH3nqcOA2DA?si=jBzmF_pjvLL8gBSo"><img src="Images/americandream.jpeg" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear"></a>
         </div>
 
     <div class="featuredname" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
@@ -103,7 +104,7 @@
 
 <div class="latestnewscontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
     <div class="latestnewsimage" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <a href="https://pitchfork.com/thepitch/lil-mabu-and-fivio-foreigns-teach-me-how-to-drill-is-viral-rap-at-its-most-shameless/"><img src="Images/latestnewshome.jpg"></a>
+        <a target="_blank" href="https://pitchfork.com/thepitch/lil-mabu-and-fivio-foreigns-teach-me-how-to-drill-is-viral-rap-at-its-most-shameless/"><img src="Images/latestnewshome.jpg"></a>
     </div>
     <div class="latestnewstitle" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
         <h2>Lil Mabu and Fivio Foreign's “Teach Me How to Drill” Is Viral Rap at Its Most Shameless</h2>
@@ -115,17 +116,17 @@
     </div>
 
     <div class="latestnewsimage" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <a href="https://pitchfork.com/news/ice-spice-facing-in-ha-mood-copyright-infringement-lawsuit/"><img src="Images/latestnewshome2.jpg.png"></a>
+        <a target="_blank" href="https://pitchfork.com/news/ice-spice-facing-in-ha-mood-copyright-infringement-lawsuit/"><img src="Images/latestnewshome2.jpg.png"></a>
     </div>
     <div class="latestnewstitle" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <h2>Ice Spice Facing “In Ha Mood” Copyright Infringement LawsuitMost Shameless</h2>
+        <h2>Ice Spice Facing “In Ha Mood” Copyright Infringement Lawsuit Most Shameless</h2>
     </div>
     <div class="latestnewsbio" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
         <p>Ice Spice is being sued by two musicians who claim that she copied one of their songs for the Like..? EP’s “In Ha Mood.” In the lawsuit, obtained by Pitchfork, Duval “D.Chamberz” Chamberlain and Kenley “Kass the Producer” Carmenate claim that Ice Spice took from their track “In That Mood,” which they released on D.Chamberz’s Boom Bap 2 Drill Rap in July 2022.</p>
     </div> 
 
     <div class="latestnewsimage" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <a href="https://pitchfork.com/news/grammys-2024-travis-scott-and-burna-boy-to-perform/"><img src="Images/latestnewshome3.png"></a>
+        <a target="_blank" href="https://pitchfork.com/news/grammys-2024-travis-scott-and-burna-boy-to-perform/"><img src="Images/latestnewshome3.png"></a>
     </div>
     <div class="latestnewstitle" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
         <h2>Grammys 2024: Travis Scott and Burna Boy to Perform Its Most Shameless</h2>
@@ -134,7 +135,7 @@
         <p>Travis Scott, Burna Boy, and Luke Combs will perform at the 2024 Grammy Awards. They join the first wave of performers, Billie Eilish, Dua Lipa, and Olivia Rodrigo. The ceremony, presented by host Trevor Noah, takes place on Sunday, February 4, at the Crypto.com arena in Los Angeles.</p>
     </div>
     <div class="seemorehome" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <a href="news.html"><h1>SEE MORE</h1></a>
+        <a target="_blank" href="news.html"><h1>SEE MORE</h1></a>
     </div>
 </div>
 
@@ -153,16 +154,61 @@
     </div>
 
     <div class="reviewscontent" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-        <div class="reviewsimage">
-            <img src="Images/americandream.jpeg">
+        <div class="review-set">
+            <div class="reviewsimage">
+                <a target="_blank" href="https://pitchfork.com/reviews/albums/21-savage-american-dream/">
+                    <img src="Images/americandream.jpeg">
+                </a>
+            </div>
+            <div class="reviewsname">
+                <h1 style="font-size: 3rem; color: #C35AA2;">21 SAVAGE</h1>
+                <h1>american dream</h1>
+                <h2 style="color: #FFDDFC;">8.9/10 Vault stars</h2>
+            </div>
         </div>
-        <div class="reviewsname">
-            <h1 style="font-size: 5rem; color: #C35AA2;">21 SAVAGE</h1>
-            <h1>american dream</h1>
-            <h2 style="color: #FFDDFC;">8.9/10</h2>
+    
+        <div class="review-set">
+            <div class="reviewsimage">
+                <a target="_blank" href="https://pitchfork.com/reviews/albums/drake-for-all-the-dogs/">
+                    <img src="Images/forallthedogs.png">
+                </a>
+            </div>
+            <div class="reviewsname">
+                <h1 style="font-size: 3rem; color: #C35AA2;">DRAKE</h1>
+                <h1>For All The Dogs</h1>
+                <h2 style="color: #FFDDFC;">6.4/10 Vault stars</h2>
+            </div>
         </div>
+    
+        <div class="review-set">
+            <div class="reviewsimage">
+                <a target="_blank" href="https://pitchfork.com/reviews/albums/travis-scott-utopia/">
+                    <img src="Images/utopia.png">
+                </a>
+            </div>
+            <div class="reviewsname">
+                <h1 style="font-size: 3rem; color: #C35AA2;">TRAVIS SCOTT</h1>
+                <h1>UTOPIA</h1>
+                <h2 style="color: #FFDDFC;">10/10 Vault stars</h2>
+            </div>
+        </div>
+
+        <div class="review-set">
+            <div class="reviewsimage">
+                <a target="_blank" href="https://pitchfork.com/reviews/albums/kid-cudi-insano/">
+                    <img src="Images/insano.jpeg">
+                </a>
+            </div>
+            <div class="reviewsname">
+                <h1 style="font-size: 3rem; color: #C35AA2;">KID CUDI</h1>
+                <h1>Insano</h1>
+                <h2 style="color: #FFDDFC;">6.7/10 Vault stars</h2>
+            </div>
+        </div>
+
     </div>
 </div>
+
 
 
 
@@ -175,8 +221,49 @@
 </div>
 
 <div class="concertscontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-    <div>
+    <div class="concertset">
+        <div class="concertimage">
+            <a target="_blank" href="https://ticketmaster.sg/activity/detail/24_brentfaiyaz"><img src="Images/brentftw.jpg"></a>
+        </div>
+        <div class="concertname">
+            <h1>Brent Faiyaz</h1>
+            <p>1 February 2024, Capitol Theatre, Singapore</p>
+            <h2>F*CK THE WORLD IT'S A WASTELAND TOUR</h2>
+        </div>
+        
+        <div class="concertset">
+            <div class="concertimage">
+                <a target="_blank" href="https://ticketmaster.sg/activity/detail/24sg_brunomars"><img src="Images/brunomarstour.jpg"></a>
+            </div>
+            <div class="concertname">
+                <h1>Bruno Mars</h1>
+                <p>3, 5, 6 April 2024, National Stadium, Singapore</p>
+                <h2>LIVE TOUR</h2>
+            </div>
+        </div>
+    
 
+        <div class="concertset">
+            <div class="concertimage">
+                <a target="_blank" href="https://ticketmaster.sg/activity/detail/24_coldplay"><img src="Images/coldplaytour.jpg"></a>
+            </div>
+            <div class="concertname">
+                <h1>Coldplay</h1>
+                <p>23, 24, 26, 27, 30, 31 January 2024, National Stadium, Singapore</p>
+                <h2>MUSIC of the SPHERES</h2>
+            </div>
+        </div>
+
+        <div class="concertset">
+            <div class="concertimage">
+                <a target="_blank" href="https://www.ticketmelon.com/very/wtesingapore"><img src="Images/w2etour.jpg"></a>
+            </div>
+            <div class="concertname">
+                <h1>wave to earth</h1>
+                <p>4 March 2024, Capitol Theatre, Singapore</p>
+                <h2>THE FIRST ERA CONCERT</h2>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -188,10 +275,15 @@
 
 <div class="featuredartist" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
     <h1>Leaderboard</h1>
+    <h2>Here are the Top 4 Artist for this month:</h2>
 </div>
+
 
 <div class="leaderboardcontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+    <div class="leaderboardset">
 
+    </div>
+</div>
 </div>
 
 
@@ -199,7 +291,7 @@
 
 
 
-
+</div>
 <hr>
 <footer>
     <p>
@@ -213,6 +305,7 @@
 </footer>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();

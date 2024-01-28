@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
-    <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <script type="module" defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.css">
+
 
     <title>Vibe Vault</title>
 </head>
@@ -35,24 +38,45 @@
       
       <main id="main-holder">
         <h1 id="login-header">SIGN UP NOW!</h1>
-            <div class="spotifyicon">
-        <a href="https://accounts.spotify.com/authorize?client_id=b6ff65d1ed1649bd883f61d2ce2576b2&redirect_uri=http://127.0.0.1:5500/index2.html&scope=user-read-currently-playing%20user-read-playback-state%20playlist-read-private&response_type=token&show_dialog=true">
-            <i class="fa-brands fa-spotify fa-5x"></i>
-        </a>
-    </div>
-        <div id="login-error-msg-holder">
-          <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        <div class="spotifyicon">
+            <a href="https://accounts.spotify.com/authorize?client_id=b6ff65d1ed1649bd883f61d2ce2576b2&redirect_uri=http://127.0.0.1:5503/index.html&scope=user-read-currently-playing%20user-read-playback-state%20playlist-read-private%20user-top-read&response_type=token&show_dialog=true">
+                <i class="fa-brands fa-spotify fa-5x"></i>
+            </a>
         </div>
-
-        <form id="login-form">
-          <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-          <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-          <input type="submit" value="Login" id="login-form-submit">
-        </form>
+        <div id="login-error-msg-holder">
+            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+        </div>
     
-      </main>
+        <div id="top-tracks-container">
+            <!-- Container to display top tracks -->
+        </div>
+    
+        <form id="login-form">
+            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+            <input type="submit" value="Login" id="login-form-submit">
+        </form>
+    </main>
+    
 
-
+      <hr>
+      <footer>
+          <p>
+              © <span id="current_year">2024,</span> <a href="https://wavy.kr/" rel="noopener" target="_blank">Vibe Vault. inc</a>
+      
+          </p>
+          <div class="icons">
+              <a href="https://www.instagram.com/wave_to_earth/?hl=en"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              <a href="https://x.com/wave_to_earth?s=20"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+          </div>
+      </footer>
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
 </body>
 </html>
     
