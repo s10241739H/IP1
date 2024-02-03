@@ -1,5 +1,9 @@
 body {
     background-color: #000 ;
+    background: url(../Images/vvv2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -9,7 +13,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+    display: none; 
   }
 
 a {
@@ -20,10 +24,6 @@ a {
     padding-top: 10px;
 }
 
-/*.icon {
-    margin-left: 0;
-}
-*/
 
 .reveal{
     position: relative;
@@ -52,23 +52,46 @@ a {
     height: 145px;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
+    /* Existing styles for screens up to 600px */
+
     #navbar {
-      padding: 20px 10px !important;
+        padding: 20px 10px !important;
     }
+
     #navbar a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
+
     }
+
     #navbar-right {
-      float: none;
+        float: none;
     }
-  }
+
+    .navbar {
+        padding: 20px 10px;
+        display: flex;
+    }
+
+    .nav-links {
+    }
+
+    .nav-links li {
+        font-size: 200px;
+    }
+
+    
+}
+
+
+
+
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #eb9be4;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -76,7 +99,7 @@ a {
 
 
 .nav-links a:hover {
-    color: #FFDDFC;
+    color: #6F647D;
 }
   
 
@@ -84,6 +107,14 @@ a {
     list-style: none;
     display: flex;
     gap: 2em;
+}
+
+#leaderboardnav a {
+    color: #be2020;
+}
+
+#leaderboardnav a:hover {
+    color: #6F647D;
 }
 
 
@@ -117,7 +148,7 @@ a {
     display: flex;
     text-align: center;
     flex-direction: column;
-    padding: 300px;
+    padding: 200px;
 }
 
 .vibevaultvinyl h1 {
@@ -141,6 +172,7 @@ a {
     justify-content: center;
     text-align: center;
     font-size: 70px;
+    color: #C35AA2;
 }
 
 .howtowin p {
@@ -173,14 +205,12 @@ a {
 .wintitle a {
     text-decoration: none;
     list-style: none;
-    color: white;
-    background-color: #A1A1A1;
+    color: #be2020;
     padding: 50px;
     border-radius: 5px;
 }
 
 .wintitle a:hover {
-    background-color: #FFDDFC;
     border-radius: 5px;
     padding: 50px;
 }
@@ -190,28 +220,26 @@ a {
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 350px;
     height: 80px;
     color: white;
     padding: 50px;
-    background-color: #A1A1A1;
+    background-color: #C35AA2;
     margin: 0 auto;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.vote:hover {
+    background-color: #FFDDFC;
 }
 
 .vote h1 {
     color: white;
     text-align: center;
     font-size: 50px;
-    background-color: #A1A1A1;
     margin: 0 auto;
 }
-
-
-
-
-
 
 .votecontainer {
     display: none;
@@ -221,12 +249,15 @@ a {
     padding: 50px;
     padding-left: 50px ;
     border-radius: 10px;
-    background-color: grey;
+    background: rgba(225, 165, 165, 0.4);
+
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
 }
+
+
 
 .votetitle {
     position: relative;
@@ -235,13 +266,13 @@ a {
 
 .votetitle h1 {
     font-size: 40px;
-    color: white;
+    color: black;
     text-align: center;
     padding: 20px;
 }
 
 .votetitle h2 {
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -295,11 +326,79 @@ a {
 
 }
 
+
+
+
+
+
+.votecontainer2 {
+    display: flex;
+    max-width: 100%;
+    width: 85%;
+    height: auto;
+    padding: 50px;
+    padding-left: 50px ;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
+.votingcontainer2 {
+    display: flex;
+    max-width: 100%;
+    width: 75%;
+    height: 155px;
+    padding: 20px;
+    background-color: #A1A1A1;
+}
+
+
+.artistcontainer2 {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    background-color: #E6E6E6;
+}
+
+.votingcontents2 {
+    display: flex;
+    flex-direction: row;   
+    max-width: 100%;
+    width: 100%;
+}
+
+.votingcontents2 img {
+    width: 150px;
+    height: 150px;
+}
+
+.votingcontents2 p{
+    padding: 25px;
+    font-size: 40px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.votingcontents2 h2 {
+    display: block;
+    padding: 50px;
+    margin-left: auto;
+}
+
+
+
 .readmore {
     display: block;
     padding: 40px;
     color: white;
 }
+
 
 .readmore {
     font-size: 40px;
@@ -307,6 +406,358 @@ a {
     color: white;
 }
 
+.readmore a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+
+
+.trimonthback {
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.trimonthback h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.trimonthback a {
+    text-decoration: underline;
+    color: white;
+}
+
+
+.trimonth {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.trimonth h1 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    color: #be2020;
+    font-size: 80px;
+    text-align: center;
+}
+
+
+.seelastmonth {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 80px;
+    color: white;
+    padding: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seelastmonth h2 {
+    color: #be2020;
+    text-align: center;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.seelastmonth h2:hover {
+    color: #f82d2d;
+}
+
+.lastmonthcontainer {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background: rgba(225, 165, 165, 0.4);
+}
+
+.lastmonth {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.lastmonth h1 {
+    font-size: 60px;
+    padding: 50px;
+    padding-left: 85px;
+    color: black;
+    max-width: 100%;
+    width: 91%;
+}
+
+.lastmonth h2 {
+    font-size: 30px;
+}
+
+.lastmonthimg {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
+    width: 80%;
+    height: auto;    
+}
+
+.lastmonthimg img {
+    width: 500px;
+    height: 300px;
+    padding: 90px;
+    transition: transform 0.6s;
+}
+
+.lastmonthimg img:hover {
+    transform: scale(1.1);
+}
+
+
+/* Annually */
+
+.triwinners {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+
+.triwinners h2 {
+    font-size: 30px;
+    color: black;
+    padding: 50px;
+}
+
+.anually {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+}
+
+.anually h2 {
+    color: black;
+    font-size: 45px;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.annualartists {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 100%;
+    width: 100%;
+    background: rgba(225, 165, 165, 0.4);
+
+}
+
+.annualartists h3 {
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.annualartists h2 {
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.annualartists h2 a {
+    color: #C35AA2;
+    text-decoration: none;
+}
+
+.annualartists h2 a:hover {
+    color: #FFDDFC;
+}
+
+.annualartistsimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%;
+    width: 90%;
+}
+
+.annualartistsimg img {
+    width: 600px;
+    height: 500px;
+    padding: 30px;
+}
+
+.leaderboardwelcome {
+    text-align: center;
+    color: black;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    cursor: default;
+}
+
+.leaderboardwelcome h1 {
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.triwin {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    overflow-y: hidden;
+}
+
+.triwin::-webkit-scrollbar {
+    display: none;
+  }
+
+.triwinimg {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    padding-left: 10px;
+
+}
+
+.triwinimg img:hover {
+    background: rgba(225, 165, 165, 0.4);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.triwinimg img {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+}
+
+.triprizes {
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.triwincond {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.leaderboardcontainer {
+    display: flex;
+    padding: 20px;
+    margin: 0 auto;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 10px;
+    width: 65vw;
+}
+
+.leaderboardset {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    cursor: pointer;
+}
+
+.leaderboardset:hover {
+    background: rgba(206, 206, 206, 0.6);
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.leaderboardset h1 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    text-align: center;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
+.leaderboardset img {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.leaderboarddiv {
+    background-color: #FDF7FF;
+}
+
+.triartists {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 80px;
+
+}
+
+.triartists h1{
+    font-size: 40px;
+    text-align: center;
+    color: #be2020;
+}
 
 
 
@@ -345,9 +796,23 @@ iframe {
     font-weight: 1000;
     font-style: bold;
     font-size: 50px;
-    color: #FFDDFC;
+    color: #be2020;
     padding-left: 300px;
 }
+
+.sketchfab-embed-wrapper2 {
+    display: flex;
+    max-width: 100%;
+    width: 94%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 
 
 
@@ -406,6 +871,23 @@ hr.leftsmall {
 
 }
 
+hr.whitehr {
+    border: 2px solid white;
+    border-radius: 1px;
+    width: 95%;
+}
+
+hr.thiccwhite {
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 95%;
+}
+
+hr.whitesmall {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 95%;
+}
 
 footer {
     text-align: center;

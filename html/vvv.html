@@ -13,13 +13,13 @@
     <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/style2.css">
 
     <title>Vibe Vault</title>
 </head>
 
 <body>
-<div class="loading-spinner">
-    <nav class="navbar"  style="background: url(../Images/vvv.png);">
+    <nav class="navbar">
         <div class="logo"><a href="../index.html"><img src="../Images/vibevaultlogo.png" width="250px" height="auto" alt="logo"></a></div>
        <!-- <div class="icon"><a href="login.html"><i class="fa-solid fa-user fa-xl"></i></a></div>-->
         <ul class="nav-links">
@@ -28,50 +28,53 @@
             <li><a href="artist.html"><h3>ARTIST</h3></a></li>
             <li><a href="concerts.html"><h3>CONCERTS</h3></a></li>
             <li><a href="reviews.html"><h3>REVIEWS</h3></a></li>
-            <li><a href="leaderboard.html"><h3>LEADERBOARD</h3></a></li>
-            <li><a href="vvv.html"><h3>VVV</h3></a></li>
+            <li id="leaderboardnav"><a href="leaderboard.html"><h3>LEADERBOARD</h3></a></li>
+            <li id="leaderboardnav"><a href="vvv.html"><h3>VVV</h3></a></li>
         </ul>
     </nav>
 
 
+
+
     
-<div class="vibevaultvinyl" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-    <h1>Vibe Vault Vinyl</h1>
-</div>
-
-
-<div class="howtowin" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-    <h1>How To WIN?</h1>
-    <p>Get your minutes in...</p>
-    <p>Listen to the selected artists and be the TOP 1% percentage of the artist listener for the month</p>
-    <p>There are 2 DIFFERENT COMPETITION:</p>
-</div>
-
-
-<div class="wincontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-    <div class="wintitle">
-        <h1><a href="trimonth.html">3 MONTHS</a></h1>
-        <h1><a href="annually.html">ANNUALLY</a></h1>
+    <div class="vibevaultvinyl" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+        <h1>Vibe Vault Vinyl</h1>
     </div>
-</div>
 
-<div class="vote" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" onclick="toggleVoteContainer()">
-    <h1>COME VOTE</h1>
-</div>
 
-<br>
-<br>
 
-<div class="votecontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
-    <div class="votetitle">
-        <h1>VOTE NOW!</h1>
-        <h2>Vote 3 Artist for the next 3 Month VVV</h2>
-        <h2>Vote for an artist and stand a chance to win their merch!</h2>
+    <div class="howtowin" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" id="50">
+        <h1>How To WIN?</h1>
+        <p>Get your minutes in...</p>
+        <p>Listen to the selected artists and be the TOP 1% percentage of the artist listener for the month</p>
+        <p>There are 2 DIFFERENT COMPETITION:</p>
     </div>
-    <div class="votingcontainer">
-        <div class="votingartistname">
-            <h2>Brent Faiyaz</h2>
+
+
+    <div class="wincontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+        <div class="wintitle">
+            <h1><a href="trimonth.html">3 MONTHS</a></h1>
+            <h1><a href="annually.html">ANNUALLY</a></h1>
         </div>
+    </div>
+
+    <div class="vote" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear" onclick="toggleVoteContainer()">
+        <h1>COME VOTE</h1>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="votecontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+        <div class="votetitle">
+            <h1>VOTE NOW!</h1>
+            <h2>Vote 3 Artist for the next 3 Months</h2>
+            <h2>Vote for an artist and stand a chance to win their merch!</h2>
+        </div>
+        <div class="votingcontainer">
+            <div class="votingartistname">
+                <h2>Brent Faiyaz</h2>
+            </div>
         <div class="artistcontainer">
             <div class="votingcontents"> 
                 <img src="../Images/sonderson.jpeg">
@@ -168,6 +171,12 @@
     </div>
 </div>
 
+
+
+<br>
+<br>
+<hr class="whitehr">
+
 <div class="howtowin" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
     <h1>Win Attractive Prizes</h1>
     <p>be the top 100 monthly listener of selected artists and you may win these!</p>
@@ -184,8 +193,8 @@
     <h1 style="padding-left: 435px;">VINYL</h1>
 </div>
 
-<div class="readmore">
-    <h2>Read More!</h2>
+<div class="readmore" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+    <h2><a href="#50">Read More!</a></h2>
 </div>
 
 

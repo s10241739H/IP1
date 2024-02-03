@@ -64,11 +64,16 @@ a {
     #navbar-right {
       float: none;
     }
+
+    .navbar {
+        padding: 20px 10px;
+        display: flex;
+    }
   }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #eb9be4;
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -76,7 +81,7 @@ a {
 
 
 .nav-links a:hover {
-    color: #FFDDFC;
+    color: #6F647D;
 }
   
 
@@ -84,6 +89,15 @@ a {
     list-style: none;
     display: flex;
     gap: 2em;
+}
+
+
+#leaderboardnav a {
+    color: #be2020;
+}
+
+#leaderboardnav a:hover {
+    color: #6F647D;
 }
 
 
@@ -557,6 +571,12 @@ a {
     color: white;
 }
 
+.singapore {
+    text-decoration: underline;
+}
+
+
+
 .leaderboardcontainer {
     display: flex;
     padding: 20px;
@@ -568,11 +588,37 @@ a {
 }
 
 .leaderboardset {
-
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 50px;
+    cursor: pointer;
 }
 
+.leaderboardset:hover {
+    background: rgba(206, 206, 206, 0.6);
+    transition: 0.5s;
+    border-radius: 5px;
+}
 
+.leaderboardset h1 {
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    text-align: center;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 40px;
+}
 
+.leaderboardset img {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 50px;
+}
 
 
 

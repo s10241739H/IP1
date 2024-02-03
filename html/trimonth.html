@@ -13,13 +13,14 @@
     <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
 
     <title>Vibe Vault</title>
 </head>
 
 <body>
-<div class="loading-spinner">
-    <nav class="navbar"  style="background: url(../Images/vvv.png);">
+
+    <nav class="navbar">
         <div class="logo"><a href="../index.html"><img src="../Images/vibevaultlogo.png" width="250px" height="auto" alt="logo"></a></div>
        <!-- <div class="icon"><a href="login.html"><i class="fa-solid fa-user fa-xl"></i></a></div>-->
         <ul class="nav-links">
@@ -28,17 +29,146 @@
             <li><a href="artist.html"><h3>ARTIST</h3></a></li>
             <li><a href="concerts.html"><h3>CONCERTS</h3></a></li>
             <li><a href="reviews.html"><h3>REVIEWS</h3></a></li>
-            <li><a href="leaderboard.html"><h3>LEADERBOARD</h3></a></li>
-            <li><a href="vvv.html"><h3>VVV</h3></a></li>
+            <li id="leaderboardnav"><a href="leaderboard.html"><h3>LEADERBOARD</h3></a></li>
+            <li id="leaderboardnav"><a href="vvv.html"><h3>VVV</h3></a></li>
         </ul>
     </nav>
 
+<div class="trimonthback">
+    <h1><a href="vvv.html#50">Back</a></h1>
+</div>
+
+
+<div class="trimonth">
+    <h1>3 MONTH VVV</h1>
+</div>
+
+<br>
+<hr class="thiccwhite">
+<br>
+<br>
+
+<div class="triprizes">
+    <h1>PRIZES YOU CAN WIN</h1>
+</div>
+
+<div class="triwin">
+    <div class="triwinimg">
+        <img src="../Images/drakemerch1.webp">
+        <img src="../Images/drakemerch2.webp">
+        <img src="../Images/drakemerch3.webp">
+        <img src="../Images/drakemerch4.jpg">
+        <img src="../Images/21merch1.webp">
+        <img src="../Images/21merch2.webp">
+        <img src="../Images/21merch3.webp">
+        <img src="../Images/21merch4.webp">
+        <img src="../Images/billiemerch1.webp">
+        <img src="../Images/billiemerch2.webp">
+        <img src="../Images/billiemerch3.webp">
+        <img src="../Images/billiemerch4.webp">
+    </div>
+</div>
+
+<div class="triwincond">
+    <h1>be the top 1% listeners of the chosen artist and stand a chance to win merchandises!</h1>
+</div>
+
+<div class="triartists">
+    <h1>THESE ARE THE SELECTED ARTIST FOR THE MONTH</h1>
+</div>
 
 
 
 
 
-    
+<div class="leaderboardcontainer" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+    <div class="leaderboardset">
+        <h1>1. Daniel Caesar</h1>
+        <img src="../Images/daniel.jpg">
+    </div>
+    <div class="leaderboardset">
+        <h1>2. Brent Faiyaz</h1>
+        <img src="../Images/faiyaz.webp">
+    </div>
+    <div class="leaderboardset">
+        <h1>3. Enhypen</h1>
+        <img src="../Images/enhypen.jpg">
+    </div>
+</div>
+</div>
+
+<br>
+<br>
+
+<div class="triwincond">
+    <h1>vote for the next competition <a href="vvv.html#5">here!</a></h1>
+</div>
+
+
+<br>
+
+<hr class="whitehr">
+
+<div class="seelastmonth" onclick="lastmonthContainer()">
+    <h2>See Last Month's</h2>
+</div>
+<br>
+<br>
+
+
+
+<div class="lastmonthcontainer">
+    <div class="lastmonth">
+        <h2>Last competition, the chosen artists were</h2>
+        <h2>Drake |21 Savage | Billie Eilish</h2>
+        <div class="lastmonthimg">
+            <img src="../Images/drake.jpg">
+            <img src="../Images/21savage.jpg">
+            <img src="../Images/billie.jpg">
+        </div>
+    </div>
+    <div class="triwinners">
+        <h2>Winners of last month's Competition!</h2>
+    </div>
+    <div class="votecontainer2" data-aos="fade-up" data-aos-duration="500" data-aos-easing="linear">
+        <div class="votingcontainer2">
+        <div class="artistcontainer2">
+            <div class="votingcontents2"> 
+                <img src="../Images/sonderson.jpeg">
+                <p>Johan Loke</p>
+                <h2>@</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="votingcontainer2">
+        <div class="artistcontainer2">
+            <div class="votingcontents2"> 
+                <img src="../Images/drake.png">
+                <p>Khaii films</p>
+                <h2>@</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="votingcontainer2">
+        <div class="artistcontainer2">
+            <div class="votingcontents2"> 
+                <img src="../Images/daniel.webp">
+                <p>Donovan Tan</p>
+                <h2>@</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
     <hr>
     <footer style="background: rgba(0, 0, 0, 0.9);">
         <p>
@@ -55,10 +185,19 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-        function toggleVoteContainer() {
-                var voteContainer = document.querySelector('.votecontainer');
-                voteContainer.style.display = (voteContainer.style.display === 'none' || voteContainer.style.display === '') ? 'flex' : 'none';
-            }
+        function lastmonthContainer() {
+    var lastmonthContainer = document.querySelector('.lastmonthcontainer');
+    var voteContainer = document.querySelector('.votecontainer');
+
+    if (lastmonthContainer.style.display === 'none' || lastmonthContainer.style.display === '') {
+        lastmonthContainer.style.display = 'flex';
+        voteContainer.style.display = 'none';
+    } else {
+        lastmonthContainer.style.display = 'none';
+        voteContainer.style.display = 'flex';
+    }
+}
+
     </script>
     </body>
     </html>

@@ -1,11 +1,11 @@
 
 //vote//
  
-function toggleVoteContainer() {
-    var voteContainer = document.querySelector('.votecontainer');
-    voteContainer.style.display = (voteContainer.style.display === 'none' || voteContainer.style.display === '') ? 'flex' : 'none';
+function lastmonthContainer() {
+    var lastmonthContainer = document.querySelector('.lastmonthcontainer');
+    lastmonthContainer.style.display = (lastmonthContainer.style.display === 'none' || lastmonthContainer.style.display === '') ? 'flex' : 'none';
+    console.log("Function executed. Display: " + lastmonthContainer.style.display);
 }
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
