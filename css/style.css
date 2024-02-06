@@ -16,9 +16,17 @@ a {
     text-decoration: none;
 }
 
-.logo {
-    padding-top: 10px;
+.lottiecharacter {
+    position: fixed;
+    z-index: 5000;
+    bottom: 0;
+    right: 0;
 }
+
+.lottiecharacter:hover {
+    cursor: pointer;
+}
+
 
 /*.icon {
     margin-left: 0;
@@ -52,23 +60,58 @@ a {
     height: 145px;
 }
 
-@media screen and (max-width: 580px) {
-    #navbar {
-      padding: 20px 10px !important;
-    }
-    #navbar a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    #navbar-right {
-      float: none;
-    }
+.navbar img {
+    width: 270px;
+    height: 90px;
+    padding-top: 20px;
+}
+@media screen and (max-width: 500px) {
 
     .navbar {
-        padding: 20px 10px;
         display: flex;
+        width: 100%;
+        height: auto;
     }
+
+    .navbar img {
+        width: 250px;
+        height: 100px;
+    }
+
+    .nav-links {
+        text-align: center;
+        width: 915px;
+    }
+    .nav-links li {
+        font-size: 20px;
+        text-align: center;
+    }
+    #myVideo {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    #memberhome {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        padding: 190px;
+    }
+    
+    #memberhome h1 {
+        text-align: center;
+    }
+
+    .featuredartist {
+        display: flex;
+        width: 100%;
+        height:400px;
+        padding: 100px;
+    }
+
+
   }
 
 .nav-links a {
@@ -101,10 +144,6 @@ a {
 }
 
 
-.logo {
-    margin-bottom: -15px;
-}
-
 .menu {
     display: flex;
     font-size: 16px;
@@ -132,16 +171,35 @@ a {
     font-size: 4.5rem;
     color: #fff;
     text-align: center;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Ensure full viewport height for vertical centering */
+    padding: 100px;
 }
 
 #memberhome a {
     list-style: none;
     text-decoration: none;
     color: #000;
+    font-size: 4.8rem;
 }
 
 #memberhome a:hover {
     color: #FFDDFC;
+}
+
+#display-username {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    #memberhome {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text within container */
+    }
 }
 
 #myVideo {
@@ -296,8 +354,8 @@ a {
     padding: 20px;
     margin: 0 auto;
     justify-content: space-evenly;
-    background: rgba(0, 0, 0, 0.9); 
-    border-radius: 10px; 
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
     width: 80vw;
 }
 
@@ -308,13 +366,18 @@ a {
 }
 
 .featuredimage img {
-    padding: 120px;
     max-width: 100%;
     height: auto;
     width: 600px;
     height: 600px;
     border-radius: 10px; /* Optional: add border-radius for a rounded image */
-    margin-left: -100px;
+}
+
+.featuredcontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Adjust the margin as needed */
 }
 
 .featuredname {
@@ -322,23 +385,39 @@ a {
     font-weight: 1000;
     font-style: bold;
     font-size: 2rem;
-    display: flex;
-    position: relative;
-    margin-right: -700px;
     margin-top: 50px;
     color: #C35AA2;
 }
 
 .featuredbio {
-    flex: 1;
-    padding: 95px;
+    padding: 20px;
     color: #fff;
     font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-right: -100px;
 }
+
+
+@media (max-width: 768px) {
+    .featuredcontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .featuredimage {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .featuredname {
+      margin-right: 0;
+      margin-top: 20px; /* Adjust the margin as needed */
+    }
+  
+    .featuredbio {
+      padding: 20px;
+      margin-right: 0;
+    }
+  }
+  
 
 
 .latestnews h1 {
@@ -355,31 +434,34 @@ a {
 
 .latestnewscontainer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     margin: 0 auto;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9); 
-    border-radius: 10px; /* Optional: add border-radius for rounded corners */
+    border-radius: 10px; 
     width: 80vw;
     
 }
 
 .latestnewsimage {
     display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .latestnewsimage img {
-    padding: 150px;
     max-width: 100%;
     height: auto;
-    width: 1200px;
+    width: 100%; /* Make the image fill its container */
+    max-width: 1200px;
 }
 
 .latestnewstitle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
@@ -584,7 +666,8 @@ a {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9); 
     border-radius: 10px;
-    width: 65vw;
+    max-width: 100%;
+    width: 60vw;
 }
 
 .leaderboardset {
@@ -614,11 +697,11 @@ a {
 }
 
 .leaderboardset img {
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     margin: 0 auto;
-    padding: 50px;
 }
+
 
 
 
@@ -689,7 +772,7 @@ a {
 }
 
 .artistimage img {
-    width: 1500px;
+    width: 875px;
     height: auto;
     margin: 0 auto;
 }
@@ -793,55 +876,78 @@ a {
 .hottestnewscontainer {
     display: flex;
     width: 100%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .hottestnewsimage {
     padding: 50px;
     margin-left: 50px;
-    width: 50%;
+    width: 100%;
     height: auto;
+    overflow: hidden;
 }
 
 .hottestnewsimage img {
-    width: 100%;
+    width: 1000px;
     height: auto;
 }
 
 .hottestnewscontainer h2 {
-    margin-right: 50px;
-    width: 50%;
     text-align: center;
-    padding-top: 250px;
-    font-size: 2rem;
+    font-size: 1.8rem;
+
 }
 
 .newscontainerscroll {
     display: flex;
     width: 100%;
 }
-
+/*
+.newscontainerscroll:hover {
+    background: rgba(0, 0, 0, 0.6);
+transition: 0.6s;
+}
+*/
 .newscontainerimage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 50px;
     margin-left: 80px;
-    width: 50%;
     height: auto;
 }
 
 .newscontainerimage img {
     width: 600px;
     height: auto;
-    margin-left: 350px;    
 }
 
-.newscontainerscroll h2 {
-    margin-right: 500px;
-    width: 50%;
-    text-align: center;
-    padding-top: 200px;
-    font-size: 1rem;
+.newscontainerimage h2 {
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+    .newscontainerimage {
+        flex-direction: row; /* Change to row layout on larger screens */
+    }
 
+    .newscontainerimage img {
+        margin-right: 20px; /* Add margin to the right for spacing between image and text */
+    }
+
+    .newscontainerimage h2 {
+        width: auto; /* Reset width for flexibility */
+        margin-top: 0; /* Reset top margin */
+    }
+}
 
 
 
@@ -872,6 +978,7 @@ a {
     border-radius: 8px;
     margin-left: 15px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .pickalocation:hover {
@@ -893,7 +1000,7 @@ a {
 
 .concertartistcontainer {
     white-space: nowrap;
-
+    overflow: hidden;
 }
 
 .concertartistname {
@@ -997,19 +1104,20 @@ a {
 
 .reviewspagecontainer {
     display: flex;
-
+    overflow: hidden;
 }
 
 .reviewspagecontent1 {
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .reviewsimages1 {
     position: relative;
     max-width: 100%;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .reviewsimages1 img {

@@ -52,23 +52,7 @@ a {
     height: 145px;
 }
 
-@media screen and (max-width: 600px) {
-    /* Existing styles for screens up to 600px */
-
-    #navbar {
-        padding: 20px 10px !important;
-    }
-
-    #navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-
-    }
-
-    #navbar-right {
-        float: none;
-    }
+@media screen and (max-width: 500px) {
 
     .navbar {
         padding: 20px 10px;
@@ -82,7 +66,9 @@ a {
         font-size: 200px;
     }
 
-    
+    .vibevaultvinyl {
+        padding: 30px;
+    }
 }
 
 
@@ -141,6 +127,35 @@ a {
     text-align: center;
 }
 
+#loadingAnimation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f82d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#loadingAnimation dotlottie-player {
+    width: 100px;
+    height: 100px;
+}
+
+.lottiecharacter {
+    position: fixed;
+    z-index: 5000;
+    bottom: 0;
+    right: 0;
+}
+
+.lottiecharacter:hover {
+    cursor: pointer;
+}
+
 
 /*VVV*/
 
@@ -149,6 +164,7 @@ a {
     text-align: center;
     flex-direction: column;
     padding: 200px;
+    align-items: center;
 }
 
 .vibevaultvinyl h1 {
@@ -189,6 +205,10 @@ a {
 .wintitle {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     padding: 10px;
     color: white;
 }
@@ -197,7 +217,6 @@ a {
 .wintitle h1 {
     font-size: 50px;
     text-align: center;
-    padding-left: 350px;
 
 }
 
@@ -214,6 +233,10 @@ a {
     border-radius: 5px;
     padding: 50px;
 }
+
+
+
+
 
 .vote {
     display: flex;
@@ -401,7 +424,7 @@ a {
 
 
 .readmore {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
     color: white;
 }
@@ -565,7 +588,6 @@ a {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    padding: 30px;
     max-width: 100%;
     width: 100%;
     background: rgba(225, 165, 165, 0.4);
@@ -598,15 +620,17 @@ a {
 .annualartistsimg {
     display: flex;
     flex-direction: row;
+    align-content: center;
     justify-content: space-evenly;
     max-width: 100%;
     width: 90%;
+    padding: 5px;
 }
 
 .annualartistsimg img {
-    width: 600px;
-    height: 500px;
-    padding: 30px;
+    width: 450px;
+    height: 400px;
+    margin-bottom: 20px;
 }
 
 .leaderboardwelcome {
@@ -629,23 +653,7 @@ a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 3months */
 
 .triwin {
     display: flex;
@@ -703,7 +711,8 @@ a {
     flex-direction: column;
     background: rgba(0, 0, 0, 0.9); 
     border-radius: 10px;
-    width: 65vw;
+    max-width: 100%;
+    width: 60vw;
 }
 
 .leaderboardset {
@@ -733,10 +742,9 @@ a {
 }
 
 .leaderboardset img {
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     margin: 0 auto;
-    padding: 50px;
 }
 
 
@@ -760,9 +768,116 @@ a {
 }
 
 
+/*Leaderboard*/
+.yourstandingscont {
+    display: flex;
+    max-width: 100%;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.9); 
+    border-radius: 5px;
+}
+
+.yourstandings {
+
+}
+
+.ldbartist {
+    display: flex;
+    flex-direction: row;
+}
+
+.ldbartist img {
+    width: 350px;
+    height: 200px;
+}
+
+.ldbartist h1 {
+    font-size: 40px;
+    padding-left: 20px;
+    padding-top: 50px;
+}
 
 
+.leadbcontainer2 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
 
+
+.ldbcontainer2 {
+    display: flex;
+    max-width: 100%;
+    width: 65%;
+    height: 155px;
+    padding: 20px;
+    border-radius: 1.5px;
+    background-color: #A1A1A1;
+}
+
+
+.contcontainer2 {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    background-color: #E6E6E6;
+}
+
+.ldbcontents2 {
+    display: flex;
+    flex-direction: row;   
+    max-width: 100%;
+    width: 100%;
+}
+
+.ldbcontents2 h1 {
+    width: 110px;
+    height: 84px;
+    font-size: 55px;
+    margin: 33px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.ldbcontents2 p{
+    width: 500px;
+    font-size: 40px;
+    padding-bottom: 100px;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+}
+
+.ldbcontents2 h2 {
+    display: block;
+    padding: 50px;
+    margin-left: auto;
+}
+
+.welcomefriends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcomefriends h1{
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+}
 
 
 
@@ -808,21 +923,6 @@ iframe {
     justify-content: center;
     align-items: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -892,6 +992,7 @@ hr.whitesmall {
 footer {
     text-align: center;
     color: white;
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;

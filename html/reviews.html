@@ -13,12 +13,12 @@
     <script src="https://kit.fontawesome.com/d63193a5c9.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.css">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
     <title>Vibe Vault</title>
 </head>
 
 <body>
-<div class="loading-spinner" id="loadingSpinner">
     <nav class="navbar">
         <div class="logo"><a href="../index.html"><img src="../Images/vibevaultlogo.png" width="250px" height="auto" alt="logo"></a></div>
        <!-- <div class="icon"><a href="login.html"><i class="fa-solid fa-user fa-xl"></i></a></div>-->
@@ -32,6 +32,12 @@
             <li id="leaderboardnav"><a href="vvv.html"><h3>VVV</h3></a></li>
         </ul>
     </nav>
+
+    <div class="lottiecharacter">
+        <dotlottie-player src="https://lottie.host/19ff8284-529f-42bd-930f-6be5df2cbea2/kni9BUNQPt.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay>
+        </dotlottie-player>
+    </div>
+    
 
 <div class="reviews">
     <h1>Reviews</h1>
@@ -225,10 +231,9 @@
 
 </body>
 
-    <hr>
 <footer style="background: rgba(0, 0, 0, 0.9);">
     <p>
-        © <span id="current_year">2024,</span> <a href="https://wavy.kr/" rel="noopener" target="_blank">Vibe Vault. inc</a>
+        © <span id="current_year">2024,</span> <a>Vibe Vault. inc</a>
 
     </p>
     <div class="icons">

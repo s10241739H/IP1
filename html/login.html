@@ -38,22 +38,14 @@
       <main id="main-holder">
         <h1 id="login-header">SIGN UP NOW!</h1>
         <div class="spotifyicon">
-            <a href="https://accounts.spotify.com/authorize?client_id=b6ff65d1ed1649bd883f61d2ce2576b2&redirect_uri=http://127.0.0.1:5503/index.html&scope=user-read-currently-playing%20user-read-playback-state%20playlist-read-private%20user-top-read&response_type=token&show_dialog=true">
-                <i class="fa-brands fa-spotify fa-5x"></i>
+            <a href="#" id="login-btn-link">
+                <i id="login-btn" class="fa-brands fa-spotify fa-5x"></i>
             </a>
         </div>
-        <div id="login-error-msg-holder">
-            <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-        </div>
-    
-        <div id="top-tracks-container">
-            <!-- Container to display top tracks -->
-        </div>
-    
         <form id="login-form">
-            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-            <input type="submit" value="Login" id="login-form-submit">
+            <input type="text" name="username" id="signin-username" class="login-form-field" placeholder="Username" required>
+            <input type="password" name="password" id="signin-password" class="login-form-field" placeholder="Password" required>
+            <input type="submit" value="Sign In" id="contact-submit">
         </form>
     </main>
     
@@ -61,7 +53,7 @@
       <hr>
       <footer>
           <p>
-              © <span id="current_year">2024,</span> <a href="https://wavy.kr/" rel="noopener" target="_blank">Vibe Vault. inc</a>
+              © <span id="current_year">2024,</span> <a>Vibe Vault. inc</a>
       
           </p>
           <div class="icons">
@@ -70,7 +62,15 @@
           </div>
       </footer>
       
-      
+      <script>
+        const clientId = "b6ff65d1ed1649bd883f61d2ce2576b2";
+        const redirectUri = "http://127.0.0.1:5503/html/profile.html";
+        const scopes = ["user-read-private", "user-read-email"];
+        const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
+    
+        // Set the href attribute of the login button link
+        document.getElementById("login-btn-link").href = authUrl;
+    </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
