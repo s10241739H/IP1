@@ -1,6 +1,14 @@
 # IP1
 Vibe Vault is a comprehensive digital literacy website that aims to provide valuable information and knowledge about the music industry! From new music releases to news about your favourite artists, to album reviews and ratings, Vibe Vault has everything. Whether you're a music enthusiast, industry professional, or a casual listener: our website is catered to you. We’ll keep you entertained with new content every day, breaking news, exclusive interviews, multimedia opportunities and even a Listening Leaderboard! Visit our website and dive deeper into the world of music. 
 
+# LINK
+https://s10241739h.github.io/IP1/
+
+# Personal Contributions
+
+Johan - Designing of website, the news page, artist, concerts, reviews.
+Khai - SPOTIFY API, Index, Indexlogged (log in), Leaderboard and VVV page.
+
 # Design Process
 The website is designed for users who are trying to find the latest news on music or find more artists. We aim to provide them information that they need and even help them find new artists. The website is not specifically designed for users who are into music but anyone who wants to learn more about music or artists. Users who are trying to find more music or new artists or even news regarding music. Not only that, users are well equipped with knowledge could also use this website to gain more knowledge regarding the latest news or artists. Users who wants to know more about their favourite artist or are trying to find new artist. Users who wants to know more about a certain album. Users who wants to know more about other people's reviews and opinions regarding an album etc. The website is designed for users to be able to support any artists with our game system. Our game system is where users can listen to chosen artists and they can compete to being the top listeners until the end of the competition. Where they can compete with others, to show their support for an artist etc. Not only fans of the artist can participate, but users who wants to find new artist and may like their art along the way may compete in this competition. This helps both the user and the artist as the user are able to show support for the artist by listening to their work.
 
@@ -15,7 +23,7 @@ The website is designed for users who are trying to find the latest news on musi
 5.As a user, i want to get to know more music so that i can enjoy new music.
 
 
-(Link Shares)
+
 
 # Features
 
