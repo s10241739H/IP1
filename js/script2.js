@@ -126,7 +126,7 @@ async function fetchData() {
         setTimeout(() => {
             // Simulate a successful response
             resolve();
-        }, 3000); // Adjust the duration as needed
+        }, 2000); // Adjust the duration as needed
     });
 }
 

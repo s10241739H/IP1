@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const usernameDisplay = document.getElementById("display-username");
 
   const clientId = "b6ff65d1ed1649bd883f61d2ce2576b2";
-  const redirectUri = "http://127.0.0.1:5503/html/profile.html";
+  const redirectUri = "http://127.0.0.1:5503/indexlogged.html";
   const scopes = ["user-read-private", "user-read-email"];
 
   const token = window.location.hash.substring(1).split("&").reduce((acc, param) => {
@@ -36,3 +36,43 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
   }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide the loading animation initially
+  const loadingAnimation = document.getElementById("loadingAnimation");
+  loadingAnimation.style.display = "none";
+
+  // Simulate a loading process
+  simulateLoading();
+});
+
+async function simulateLoading() {
+  // Show the loading animation
+  const loadingAnimation = document.getElementById("loadingAnimation");
+  loadingAnimation.style.display = "block";
+
+  try {
+      // Simulate an asynchronous task (e.g., fetching data)
+      await fetchData();
+
+      // Hide the loading animation when the task is complete
+      loadingAnimation.style.display = "none";
+  } catch (error) {
+      console.error("Error:", error);
+
+      // Handle errors and hide the loading animation
+      loadingAnimation.style.display = "none";
+  }
+}
+
+async function fetchData() {
+  // Simulate an asynchronous task (e.g., fetching data)
+  return new Promise((resolve, reject) => {
+      setTimeout(() => {
+          // Simulate a successful response
+          resolve();
+      }, 2000); // Adjust the duration as needed
+  });
+}

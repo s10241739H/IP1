@@ -59,8 +59,7 @@ a {
         display: flex;
     }
 
-    .nav-links {
-    }
+
 
     .nav-links li {
         font-size: 200px;
@@ -133,7 +132,10 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #f82d2d;
+    background: url(../Images/vvv2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -777,9 +779,6 @@ a {
     border-radius: 5px;
 }
 
-.yourstandings {
-
-}
 
 .ldbartist {
     display: flex;
@@ -880,7 +879,15 @@ a {
 }
 
 
-
+#display-username {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Rock Salt", cursive;
+    font-weight: 1000;
+    font-style: bold;
+    font-size: 60px;
+}
 
 
 
@@ -927,6 +934,8 @@ iframe {
 
 
 /*extras*/
+
+
 .searchbar {
     display: flex;
     flex-direction: column;

@@ -42,11 +42,6 @@
                 <i id="login-btn" class="fa-brands fa-spotify fa-5x"></i>
             </a>
         </div>
-        <form id="login-form">
-            <input type="text" name="username" id="signin-username" class="login-form-field" placeholder="Username" required>
-            <input type="password" name="password" id="signin-password" class="login-form-field" placeholder="Password" required>
-            <input type="submit" value="Sign In" id="contact-submit">
-        </form>
     </main>
     
 
@@ -57,14 +52,14 @@
       
           </p>
           <div class="icons">
-              <a href="https://www.instagram.com/wave_to_earth/?hl=en"><i class="fa-brands fa-instagram fa-xl"></i></a>
-              <a href="https://x.com/wave_to_earth?s=20"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+              <a target="_blank" href="https://www.instagram.com/vvibevault/"><i class="fa-brands fa-instagram fa-xl"></i></a>
+              <a href=""><i class="fa-brands fa-x-twitter fa-xl"></i></a>
           </div>
       </footer>
       
       <script>
         const clientId = "b6ff65d1ed1649bd883f61d2ce2576b2";
-        const redirectUri = "http://127.0.0.1:5503/html/profile.html";
+        const redirectUri = "http://127.0.0.1:5503/indexlogged.html";
         const scopes = ["user-read-private", "user-read-email"];
         const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
     
