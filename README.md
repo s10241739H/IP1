@@ -2,7 +2,7 @@
 Vibe Vault is a comprehensive digital literacy website that aims to provide valuable information and knowledge about the music industry! From new music releases to news about your favourite artists, to album reviews and ratings, Vibe Vault has everything. Whether you're a music enthusiast, industry professional, or a casual listener: our website is catered to you. We’ll keep you entertained with new content every day, breaking news, exclusive interviews, multimedia opportunities and even a Listening Leaderboard! Visit our website and dive deeper into the world of music. 
 
 # LINK
-https://s10241739h.github.io/IP1/
+https://s10241739h.github.io/VibeVault/
 
 # Personal Contributions
 
