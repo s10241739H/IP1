@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   const usernameDisplay = document.getElementById("display-username");
 
   const clientId = "b6ff65d1ed1649bd883f61d2ce2576b2";
-  const redirectUri = "http://127.0.0.1:5503/indexlogged.html";
+  const redirectUri = "https://s10241739h.github.io/VibeVault/indexlogged.html";
   const scopes = ["user-read-private", "user-read-email"];
 
   const token = window.location.hash.substring(1).split("&").reduce((acc, param) => {
